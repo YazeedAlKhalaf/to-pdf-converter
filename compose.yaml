@@ -1,0 +1,10 @@
+services:
+  pdf-converter:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./uploads:/app/uploads
+    environment:
+      - NODE_ENV=production
+      - MAX_FILE_SIZE=50mb
